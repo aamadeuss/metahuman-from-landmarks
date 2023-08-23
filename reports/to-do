@@ -1,0 +1,5 @@
+. make jsonProcessor run process() parallelly
+. make a gui for the pipeline
+. find a way to transfer animations from animBP to metahuman
+. add more accurate time step methods to achieve near-perfect 60 fps output
+. add a key press check for stopping the process in the middle or after ending
