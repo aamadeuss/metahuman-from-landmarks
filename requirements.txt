@@ -61,7 +61,7 @@ nest-asyncio==1.5.7
 numpy==1.24.3
 oauthlib==3.2.2
 open3d==0.17.0
-opencv-contrib-python==4.8.0.76
+opencv-python-headless==4.8.0.76
 opt-einsum==3.3.0
 packaging==23.1
 pandas==2.0.3
