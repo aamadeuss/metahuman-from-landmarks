@@ -43,18 +43,14 @@ def getFrame(inp):
     # st.write('Processing frame: ' + str(filename))
     model = inp[0]
     data = inp[1]
-    frames_landmarks = []
     try:
         frame = data['landmark']
-        landmark_subset = landmark_pb2.NormalizedLandmarkList(
-            landmark=frame)
-        frames_landmarks.append(landmark_subset)
     except Exception as e:
         print(e)
         return None
     frame_input = []
-    for i in filter_landmarks:
-        frame_input.append([frame[i]['x'], frame[i]['y']])
+    for i in range(478):
+        frame_input.append([frame[i]['x'], frame[i]['y'], frame[i]['z']])
     if len(frame_input) > 0:
         model_output = blendshapes(model, frame_input)
         model_output = model_output[0]

@@ -47,7 +47,7 @@ with col1.form('jsons_form'):
 
 with col2.form('model_form'):
     st.subheader('Conversion Model')
-    model_pick = st.selectbox('Choose the conversion model:', ('Mediapipe Landmarker', 'CNN Model', 'MLP Mixer Model'))
+    model_pick = st.selectbox('Choose the conversion model:', ('Mediapipe Landmarker', 'CNN Model', 'MLP Mixer Model', 'MobileNetV3'))
     submit_model_btn = st.form_submit_button(label='Submit',
                                              help='Submit the conversion model choice',
                                              on_click=lambda: state.update(model_submitted=True))

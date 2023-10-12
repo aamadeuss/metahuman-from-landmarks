@@ -11,7 +11,9 @@ def set_model_from_choice(state, choice):
     elif choice == 'CNN Model':
         model = 'models/CNN_20_softplus.keras'
     elif choice == 'MLP Mixer Model':
-        model = 'models/MLP_Mixer_10.t5'    
+        model = 'models/MLP_Mixer_10.t5'
+    elif choice == 'MobileNetV3':
+        model = 'models/MobileNetV3.h5'   
     try:
         state.model = tf.keras.models.load_model(model, compile=False)
         state.update(model_submitted=True)

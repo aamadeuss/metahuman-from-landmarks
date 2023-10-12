@@ -84,9 +84,10 @@ def blendshapes(model, frame_input,filter_lndmarks = filter_lndmarks,blendshape_
     # for i in filter_lndmarks:
     #     frame_input.append([detection_result.face_landmarks[0][i].x,detection_result.face_landmarks[0][i].y])
 
-    frame_input = np.array(frame_input).reshape(1,146,2).astype('float32')
-    frame_input = np.expand_dims(frame_input, -1)
-    frame_input = frame_input.reshape(1,1,146,2,1)
+    #change the shape in the next line and then the reshape after that
+    frame_input = np.array(frame_input).reshape(1,478,3).astype('float32')
+    # frame_input = np.expand_dims(frame_input, -1)
+    frame_input = frame_input.reshape(1,1,478,3,1)
     output_data = model.predict(frame_input)
 
     return output_data
